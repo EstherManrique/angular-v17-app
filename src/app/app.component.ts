@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgIf, RouterOutlet],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [NgIf, RouterOutlet, DashboardComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
